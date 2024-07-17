@@ -30,16 +30,18 @@ if page.status_code == 200:
             if len(cell_data) == len(headers):
                 dataf.loc[len(dataf)] = cell_data
 
-        '''# Convert relevant columns to numeric
+        '''Converting apropriate columns to numeric values
         for col in dataf.columns[2:]:
-            dataf[col] = pd.to_numeric(dataf[col].str.replace(',', ''), errors='coerce').fillna(0)
+            dataf[col] = pd.to_numeric(dataf[col], errors='coerce').fillna(0)
 
-        # Compute continental data
+        # Grouping data by continent and sum the numeric columns
         continent_data = dataf.groupby('Continent').sum(numeric_only=True).reset_index()
+        
+        # Adjusting dataframe (df) for concatenation
         continent_data.insert(0, 'Country,Other', continent_data['Continent'])
         continent_data.drop('Continent', axis=1, inplace=True)
 
-        # Concatenate continental data on top of worldwide data
+        # Concatenating the continent data with the main dataframe
         dataf = pd.concat([continent_data, dataf], ignore_index=True)'''
 
         # Save to CSV
