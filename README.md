@@ -1,4 +1,4 @@
-# Simple Classification Model for AI
+# Simple Generative Model for AI
 
 ## Project Overview
 This project aims to predict future trends of COVID-19 cases using data from Worldometer. By building and analyzing plots/graphs, we aim to understand potential future scenarios if the reporting and testing of cases continue.
