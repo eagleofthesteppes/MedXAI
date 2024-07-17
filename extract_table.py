@@ -30,6 +30,18 @@ if page.status_code == 200:
             if len(cell_data) == len(headers):
                 dataf.loc[len(dataf)] = cell_data
 
+        '''# Convert relevant columns to numeric
+        for col in dataf.columns[2:]:
+            dataf[col] = pd.to_numeric(dataf[col].str.replace(',', ''), errors='coerce').fillna(0)
+
+        # Compute continental data
+        continent_data = dataf.groupby('Continent').sum(numeric_only=True).reset_index()
+        continent_data.insert(0, 'Country,Other', continent_data['Continent'])
+        continent_data.drop('Continent', axis=1, inplace=True)
+
+        # Concatenate continental data on top of worldwide data
+        dataf = pd.concat([continent_data, dataf], ignore_index=True)'''
+
         # Save to CSV
         current_time = datetime.now()
         time_str = current_time.strftime("%H_%M_%S")
