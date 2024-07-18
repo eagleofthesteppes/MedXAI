@@ -45,11 +45,10 @@ This project is licensed under the MIT License.
 For any questions or suggestions, please open an issue or contact us at [nkumar7@ualberta.ca], [adityadi@ualberta.ca], [tatsat@ualberta.ca].
 
 ## Contributors
-- **Nitin** - [nkumar7@ualberta.ca]{mailto:nkumar7@ualberta.ca}
+- **Nitin** - [nkumar7@ualberta.ca](mailto:nkumar7@ualberta.ca)
 - **Aditya** - [adityadi@ualberta.ca](mailto:adityadi@ualberta.ca)
 - **Tatsat** - [tatsat@ualberta.ca](mailto:tatsat@ualberta.ca)
-- **Tri**
+- **Tri** - [tridhatriv@gmail.com](mailto:tridhatriv@gmail.com)
 - **Hazel**
 - **Mayank**
-- **Parmin**
-- **Ryan**
+- **Ryan** - [Ryan.Chattopadhyay1@gmail.com](mailto:Ryan.Chattopadhyay1@gmail.com)
