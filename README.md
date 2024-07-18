@@ -49,6 +49,6 @@ For any questions or suggestions, please open an issue or contact us at [nkumar7
 - **Aditya** - [adityadi@ualberta.ca](mailto:adityadi@ualberta.ca)
 - **Tatsat** - [tatsat@ualberta.ca](mailto:tatsat@ualberta.ca)
 - **Tri** - [tridhatriv@gmail.com](mailto:tridhatriv@gmail.com)
-- **Hazel**
-- **Mayank**
+- **Hazel** - [hcho3@ualberta.ca](mailto:hcho3@ualberta.ca)
+- **Mayank** - [mkhandel@ualberta.ca](mailto:mkhandel@ualberta.ca)
 - **Ryan** - [Ryan.Chattopadhyay1@gmail.com](mailto:Ryan.Chattopadhyay1@gmail.com)
