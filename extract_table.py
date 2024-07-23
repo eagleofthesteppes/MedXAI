@@ -61,7 +61,7 @@ if page.status_code == 200:
                 # Save to CSV
                 current_time = datetime.now()
                 time_str = current_time.strftime("%H_%M_%S")
-                file_name = f"worldometerdata_{category}_{time_str}.csv"
+                file_name = f"worldometerdata_{category}.csv"
                 category_data.to_csv(file_name, index=False)
                 print(f"Saved to '{file_name}'")
     else:
