@@ -51,6 +51,10 @@ if page.status_code == 200:
                 # Debug: Print the number of rows for each category
                 print(f"Category: {category}, Number of rows: {len(category_data)}")
 
+                # Check if the category_data is empty
+                if category_data.empty:
+                    print(f"Warning: No data found for category '{category}'.")
+
                 # Save to CSV
                 current_time = datetime.now()
                 time_str = current_time.strftime("%H_%M_%S")
@@ -65,4 +69,3 @@ if page.status_code == 200:
 else:
     # Error message for failed webpage retrieval
     print(f"Failed to retrieve the webpage. Status code: {page.status_code}")
-
