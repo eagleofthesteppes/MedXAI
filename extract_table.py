@@ -46,7 +46,10 @@ if page.status_code == 200:
                 if category == 'All':
                     category_data = dataf
                 else:
-                    category_data = dataf[dataf['Continent'] == category]
+                    if category == "Oceania":
+                        category_data = dataf[dataf['Continent'] == "Australia/Oceania"]
+                    else:
+                        category_data = dataf[dataf['Continent'] == category]
 
                 # Debug: Print the number of rows for each category
                 print(f"Category: {category}, Number of rows: {len(category_data)}")
