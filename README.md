@@ -28,7 +28,7 @@ This project aims to predict future trends of COVID-19 cases using data from Wor
     ```
 4. **Run the data extraction script**:
     ```bash
-    python sort_and_divide_data.py
+    python sort_and_divide_data.ipynb
     ```
 5. **Update the repository**:
     ```bash
