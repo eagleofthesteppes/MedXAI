@@ -2,6 +2,9 @@ requests
 bs4
 pandas
 datetime
+<<<<<<< HEAD
 csv
 os
 
+=======
+>>>>>>> e1179446fe8976518fb3b5213deeeb7e73a59584
