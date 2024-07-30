@@ -22,17 +22,21 @@ This project aims to predict future trends of COVID-19 cases using data from Wor
     ```bash
     pip install -r requirements.txt
     ```
-3. **Run the data extraction script**:
+3. **Change to the data directory**:
     ```bash
-    python extract_table.py
+    cd data/
     ```
-4. **Analyze and visualize the data**:
+4. **Run the data extraction script**:
     ```bash
-    python analyze_data.py
+    python sort_and_divide_data.py
+    ```
+5. **Update the repository**:
+    ```bash
+    git pull origin main
     ```
 
 ## Usage
-- **Data Extraction**: The script `extract_table.py` extracts data from Worldometer and saves it as a CSV file.
+- **Data Extraction**: The script `sort_and_divide_data.py` extracts data from the OWID Dataset and saves the CSV files in a subfolder.
 - **Data Analysis**: The script `analyze_data.py` reads the CSV file, performs analysis, and generates plots/graphs.
 
 ## Contributing
@@ -42,13 +46,13 @@ We welcome contributions! Please fork the repository and submit a pull request.
 This project is licensed under the MIT License.
 
 ## Contact
-For any questions or suggestions, please open an issue or contact us at [nkumar7@ualberta.ca], [adityadi@ualberta.ca], [tatsat@ualberta.ca].
+For any questions or suggestions, please open an issue or contact us at [nkumar7@ualberta.ca], [adityadi@ualberta.ca], [Ryan.Chattopadhyay1@gmail.com].
 
 ## Contributors
 - **Nitin** - [nkumar7@ualberta.ca](mailto:nkumar7@ualberta.ca)
 - **Aditya** - [adityadi@ualberta.ca](mailto:adityadi@ualberta.ca)
+- **Ryan** - [Ryan.Chattopadhyay1@gmail.com](mailto:Ryan.Chattopadhyay1@gmail.com)
+- **Hazel** - [hcho3@ualberta.ca](mailto:hcho3@ualberta.ca)
 - **Tatsat** - [tatsat@ualberta.ca](mailto:tatsat@ualberta.ca)
 - **Tri** - [tridhatriv@gmail.com](mailto:tridhatriv@gmail.com)
-- **Hazel** - [hcho3@ualberta.ca](mailto:hcho3@ualberta.ca)
 - **Mayank** - [mkhandel@ualberta.ca](mailto:mkhandel@ualberta.ca)
-- **Ryan** - [Ryan.Chattopadhyay1@gmail.com](mailto:Ryan.Chattopadhyay1@gmail.com)
