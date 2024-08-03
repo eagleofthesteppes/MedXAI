@@ -5,5 +5,6 @@ datetime
 csv
 os
 matplotlib
+scikit-learn
 sklearn
 
