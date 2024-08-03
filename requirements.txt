@@ -4,7 +4,8 @@ pandas
 datetime
 csv
 os
-scikit-learn
-joblib
-sklearn
+matplotlib.pyplot
+sklearn.model_selection
+sklearn.linear_model
+sklearn.metrics
 
