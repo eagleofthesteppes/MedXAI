@@ -7,4 +7,6 @@ os
 matplotlib
 scikit-learn
 sklearn
-
+numpy
+scipy
+joblib
