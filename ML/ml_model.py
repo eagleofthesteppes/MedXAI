@@ -62,7 +62,7 @@ plt.gca().xaxis.set_major_locator(mdates.YearLocator())  # Set x-axis ticks year
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  # Format x-axis ticks as years
 
 # Set y-axis limits and format
-plt.ylim(0, 302000000)  # Set the y-axis limit
+plt.ylim(0, 400000000)  # Set the y-axis limit
 plt.gca().yaxis.set_major_locator(plt.MultipleLocator(100000000))  # Set y-axis ticks at intervals of 100,000,000
 
 # Add legend
