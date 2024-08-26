@@ -13,6 +13,11 @@ df = pd.read_csv('../data/OWID DataSet/owid-covid-data-master-file.csv', parse_d
 # Replace NaN values in the 'total_cases' column with 0
 df['total_cases'] = df['total_cases'].fillna(0)
 
+# Filter the DataFrame for the date range from January 2020 to July 2024
+start_date = '2020-01-01'
+end_date = '2024-07-31'
+df = df[(df['date'] >= start_date) & (df['date'] <= end_date)]
+
 # Calculate the number of days since the first date
 df['Days'] = (df['date'] - df['date'].min()).dt.days
 
@@ -35,7 +40,7 @@ model.fit(X_poly, y_train)
 X_test_poly = poly.transform(X_test)
 y_pred = model.predict(X_test_poly)
 
-# Generate future dates for predictions
+# Generate future dates for predictions (up to July 2024)
 future_days = np.arange(df['Days'].max() + 1, df['Days'].max() + 31).reshape(-1, 1)
 future_days_poly = poly.transform(future_days)
 future_predictions = model.predict(future_days_poly)
@@ -47,6 +52,8 @@ plt.plot(df['date'].iloc[X_test.index], y_pred, label='Predicted Cases', linesty
 plt.plot(df['date'].max() + pd.to_timedelta(future_days.flatten(), unit='D'), future_predictions, label='Future Predictions', linestyle='--')
 plt.xlabel('Date')
 plt.ylabel('Number of Cases')
-plt.title('Actual vs Predicted COVID-19 Cases')
+plt.title('Actual vs Predicted COVID-19 Cases (Jan 2020 - Jul 2024)')
+plt.xlim(pd.Timestamp('2020-01-01'), pd.Timestamp('2024-07-31'))
+plt.ylim(0, 301479569)  # Set the y-axis limit
 plt.legend()
 plt.show()
