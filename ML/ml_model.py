@@ -10,12 +10,15 @@ from sklearn.preprocessing import PolynomialFeatures
 # Load data with the correct column name for the date
 df = pd.read_csv('../data/OWID DataSet/owid-covid-data-master-file.csv', parse_dates=['date'])
 
+# Replace NaN values in the 'total_cases' column with 0
+df['total_cases'] = df['total_cases'].fillna(0)
+
 # Calculate the number of days since the first date
 df['Days'] = (df['date'] - df['date'].min()).dt.days
 
 # Define features and target
 X = df[['Days']]
-y = df['total_cases']  # Adjust this if you're targeting a different column
+y = df['total_cases']
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -47,4 +50,3 @@ plt.ylabel('Number of Cases')
 plt.title('Actual vs Predicted COVID-19 Cases')
 plt.legend()
 plt.show()
-
