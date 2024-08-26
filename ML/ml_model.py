@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.preprocessing import PolynomialFeatures
+import matplotlib.dates as mdates
 
 # Load data with the correct column name for the date
 df = pd.read_csv('../data/OWID DataSet/owid-covid-data-master-file.csv', parse_dates=['date'])
@@ -50,10 +51,23 @@ plt.figure(figsize=(12, 8))
 plt.plot(df['date'], df['total_cases'], label='Actual Cases')
 plt.plot(df['date'].iloc[X_test.index], y_pred, label='Predicted Cases', linestyle='--')
 plt.plot(df['date'].max() + pd.to_timedelta(future_days.flatten(), unit='D'), future_predictions, label='Future Predictions', linestyle='--')
+
+# Set x-axis and y-axis labels, title
 plt.xlabel('Date')
 plt.ylabel('Number of Cases')
 plt.title('Actual vs Predicted COVID-19 Cases (Jan 2020 - Jul 2024)')
-plt.xlim(pd.Timestamp('2020-01-01'), pd.Timestamp('2024-07-31'))
-plt.ylim(0, 301479569)  # Set the y-axis limit
+
+# Set x-axis limits and format
+plt.xlim(pd.Timestamp('2020-01-01'), pd.Timestamp('2024-12-31'))
+plt.gca().xaxis.set_major_locator(mdates.YearLocator())  # Set x-axis ticks yearly
+plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y'))  # Format x-axis ticks as years
+
+# Set y-axis limits and format
+plt.ylim(0, 302000000)  # Set the y-axis limit
+plt.gca().yaxis.set_major_locator(plt.MaxNLocator(integer=True))  # Ensure y-axis ticks are integers
+
+# Add legend
 plt.legend()
+
+# Show plot
 plt.show()
