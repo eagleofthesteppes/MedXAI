@@ -3,6 +3,7 @@ bs4
 pandas
 datetime
 matplotlib
+wheel
 scikit-learn
 numpy
 scipy
