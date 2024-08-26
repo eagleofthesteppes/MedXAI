@@ -2,11 +2,11 @@ requests
 bs4
 pandas
 datetime
-csv
-os
 matplotlib
 scikit-learn
-sklearn
 numpy
 scipy
 joblib
+sklearn
+csv
+os
