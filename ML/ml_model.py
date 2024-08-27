@@ -70,3 +70,10 @@ plt.legend()
 
 # Show plot
 plt.show()
+
+
+
+###
+# add all totals of all continents | keep the timframe constant
+###
+
